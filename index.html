@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basics od html</title>
+    <link rel="shortcut icon" href="dog16.jpg" type="image/x-icon">
+    <style>
+        a:link{
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover{
+            color: red;
+        }
+        body{
+            background-image: url(dog16.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- html heading -->
+    <h1>first heading important</h1>
+    <h2>second headinf smaller than first</h2>
+    <h3 id="h3">third headinf smaller than second</h3>
+    <h4>fourth headinf smaller than third</h4>
+    <h5>fifth headinf smaller than fourth</h5>
+    <h6>sixth headinf smaller than fifth.its less important</h6>
+
+    <!-- html paragraph tag -->
+    <p>This is a paragraph.</p>
+    <p>you can learn <br>how to do write paragraph</p>
+
+    <!-- html link tags -->
+    <a href="https://www.google.com" target="_self">Google</a>
+    <p><a href="#h3">jump</a></p>
+
+    <!-- image tags  -->
+    <img src="https://plus.unsplash.com/premium_photo-1666900440561-94dcb6865554?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tfGVufDB8fDB8fHww" alt="rendom image" height="50px" width="50px">
+    <img src="dog16.jpg" usemap="#work" alt="image description"/>
+    <map name="work>
+    <area shape="rect" coords="34,44,70,57" href="dogh.jpg" alt="ok">
+</map>
+
+<picture>
+    <source media="(min-width: 650px)" srcset="img_food.jpg">
+    <source media="(min-width: 465px)" srcset="dogh.jpg">
+    <img src="dog16.jpg" alt="">
+  </pictur
+</body>
+</html>

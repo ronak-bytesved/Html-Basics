@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning iframe</title>
+    <style>
+        iframe{
+            /* border: none; */
+        }
+    </style>
+</head>
+<body>
+    <button onclick="sum()">click me</button>
+    <p id="styles">Lorem, ipsum dolor. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia aspernatur earum repellat nihil beatae temporibus tempore deleniti itaque nam, consequatur sit esse ad ex. Pariatur deleniti molestiae vel ut aperiam harum fugit.</p>
+    <!-- iframe means a web page inside a webpage. we can set height and width property -->
+    
+    <iframe src="index.html"style="border: 2px solid red" name="iframe-a" title="about html" frameborder="0" height="20%" width="50%"> </iframe>
+
+    <!-- it is open in the iframe -->
+    <p><a href="class-id.html" target="iframe-a">open it</a></p>
+
+    <!-- add javascript in html with script  -->
+    <script>
+        function sum(){
+            document.getElementById("styles").style.color = "red";
+            document.getElementById("styles").style.backgroundColor = "yellow";
+        }
+    </script>
+</body>
+</html>
