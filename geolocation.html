@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <p>click to show location</p>
+    <button onclick="clickc()">show</button>
+    <button onclick="clickcm()">showm</button>
+    <button onclick="timedCount()" onload="(setTimeout(timedCount(),500))
+    ">timer</button>
+    <p id="demo"></p>
+    <script>
+        let y = document.getElementById("demo");
+        function showlocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPositon);
+        }
+        else{
+            y.innerHTML = "Geolocation is not supported by this browser.";
+        }
+
+        function showPositon(position){
+              y.innerHTML = "latitude : " + position.coords.heading + "<br> langitude :" + position.coords.longitude;
+        }
+    }
+    function clickc(){
+        if(typeof(Storage!==undefined)){
+            if(localStorage.clickcount){
+                localStorage.clickcount = Number(localStorage.clickcount)+1;
+            }      
+        
+        else{
+            localStorage.clickcount = 1;
+        }
+        document.getElementById('result').innerHTML = "you clicked onnbutton " + localStorage.clickcount;
+        }
+    else{
+        document.getElementById('result').innerHTML = "your browser did not suppert itl"
+    }
+}function clickcm(){
+        if(typeof(Storage!==undefined)){
+            if(localStorage.clickcount){
+                localStorage.clickcount = Number(localStorage.clickcount)-1;
+            }      
+        
+        else{
+            localStorage.clickcount = 1;
+        }
+        document.getElementById('result').innerHTML = "you clicked onnbutton " + localStorage.clickcount;
+        }
+    else{
+        document.getElementById('result').innerHTML = "your browser did not suppert itl"
+    }
+}
+
+var i = 0;
+
+function timedCount() {
+  i = i + 1;
+  postMessage(i);
+  document.getElementById('result').innerHTML = postMessage(i);
+}
+
+// timedCount();
+
+
+    </script>
+    
+</body>
+</html>
