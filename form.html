@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html form tags</title>
+    <style>
+        .center{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+    <form action="hello.html" method="post">
+        <label for="fname">fname : </label>
+        <input type="text" name="fname" id="fname" placeholder="first name" ><br><br>
+        <label for="lname">lname : </label>
+        <input type="text" name="lname" id="lname" placeholder="last name" ><br>
+
+        <label for="range">range : </label>
+        0
+        <input type="range" value="" name="range" id="range" max="50" min="0">50
+        <br>
+        <br>
+        <label for="dateofb">date : </label>
+        <input type="datetime-local" id="dateofb" name="dateofb" >
+        <br>
+        <br>
+        <label for="colorb">color : </label>
+        <input type="color" name="colorb" id="colorb" value="#558800">
+        <br>
+        <br>
+        <input type="submit" name="" id="" value="submit">
+
+        <!-- to create a form for submit the data to hello.txt -->
+        <fieldset class="center">
+            <legend>student form</legend>
+            <form action="hello.txt" method="post">
+                <label for="fname">name : </label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label for="lname">lname : </label>
+                <input type="text" id="lname" name="lname"><br><br>
+                <label for="phno">phone no : </label>
+                <input type="tel" id="phno" name="phno" required><br><br>
+                <label for="add">address : </label>
+                <textarea  name="add" id="add" cols="50" rows="5"></textarea>
+                <br><br>
+                <label for="gender">Gender : </label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="feMale">
+                <label for="female">feMale</label>
+                <br><br>
+                <input type="submit" name="" id="" value="submit">
+            </form>
+        </fieldset>
+
+
+
+    </form>
+</fieldset>
+
+
+
+    </form>
+
+</body>
+
+</html>
